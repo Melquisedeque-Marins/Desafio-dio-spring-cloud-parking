@@ -50,4 +50,17 @@ public class ParkingService {
         Parking parking = findById(id);
         parkingRepository.delete(parking);
     }
+
+    public ParkingDTO update(ParkingCreateDTO dto, Long id) {
+        var parkingSaved = findById(id);
+        parkingSaved.setColor(dto.getColor());
+        parkingSaved.setState(dto.getState());
+        parkingSaved.setLicense(dto.getLicense());
+        parkingSaved.setModel(dto.getModel());
+      //Parking parkintToUpdate = parkingMapper.ParkingCreateToParking(dto);
+        parkingRepository.save(parkingSaved);
+        return parkingMapper.parkingToDTO(parkingSaved);
+    }
+
+
 }
