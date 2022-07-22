@@ -1,9 +1,9 @@
 package com.mck.cloudparking.controller;
 
-import org.testcontainers.containers.PostgreSQLContainer;
+//import org.testcontainers.containers.PostgreSQLContainer;
 
 public abstract class AbstractContainerBase {
-    
+  /* 
     static final PostgreSQLContainer POSTGRE_SQL_CONTAINER;
 
     static {
@@ -13,4 +13,5 @@ public abstract class AbstractContainerBase {
         System.setProperty("spring.datasource.username", POSTGRE_SQL_CONTAINER.getUsername());
         System.setProperty("spring.datasource.password", POSTGRE_SQL_CONTAINER.getPassword());
     }
+    */  
 }
