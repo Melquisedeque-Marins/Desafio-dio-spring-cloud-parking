@@ -67,6 +67,13 @@ public class ParkingController {
         parkingService.update(dto, id);
         return ResponseEntity.ok().build();
     }
+
+    @PostMapping("/{id}")
+    public ResponseEntity<ParkingDTO> checkOut(@PathVariable Long id){
+        Parking parking = parkingService.checkOut(id);
+        return ResponseEntity.ok().body(parkingMapper.parkingToDTO(parking));
+
+    }
 }
 
 

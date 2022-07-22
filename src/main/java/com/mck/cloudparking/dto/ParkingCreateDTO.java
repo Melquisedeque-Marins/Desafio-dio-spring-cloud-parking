@@ -1,5 +1,6 @@
 package com.mck.cloudparking.dto;
 
+
 public class ParkingCreateDTO {
     
     private String license;

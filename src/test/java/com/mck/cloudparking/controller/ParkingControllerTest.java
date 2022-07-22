@@ -11,7 +11,7 @@ import com.mck.cloudparking.dto.ParkingCreateDTO;
 import io.restassured.RestAssured;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class ParkingControllerTest {
+public class ParkingControllerTest{
 
     @LocalServerPort
     private int randomPort;
@@ -19,7 +19,6 @@ public class ParkingControllerTest {
     @BeforeEach
     public void setUpTest(){
         RestAssured.port = randomPort;
-
     }
 
     @Test
@@ -38,7 +37,6 @@ public class ParkingControllerTest {
             .post("/parkings")
             .then()
             .statusCode(201);
-
     }
 
     @Test
